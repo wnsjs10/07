@@ -1,21 +1,11 @@
 #include <stdio.h>
-void sub(void); 
+int all_files;
 
-int main(void)
-{
-   int i;
-   for(i = 0; i < 3; i++)
-      sub();
-    return 0;
-}
+extern void sub();
 
-void sub(void)
+int main (void)
 {
-    int auto_count=0;
-   static int static_count = 0; 
-   auto_count++;
-   static_count++;
-   printf("auto_count is %d\n", auto_count);
-   printf("static_count is %d\n", static_count);
+    sub();
+    printf("%d\n", all_files);
+    return 0;   
 }
-   
